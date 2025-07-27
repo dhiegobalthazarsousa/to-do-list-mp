@@ -1,4 +1,4 @@
-import { preencherListas, setTarefa } from "./functions.js";
+import { preencherListas, insert } from "./functions.js";
 
 const TODO_LIST = document.querySelector("#todo-list");
 const DONE_LIST = document.querySelector("#done-list");
@@ -6,11 +6,15 @@ const ADD_BTN = document.querySelector("#todo-btn");
 
 preencherListas(TODO_LIST, DONE_LIST);
 
-ADD_BTN.addEventListener("click", (event) => {
-    const INPUT = document.querySelector("#novo-item");
-    let tarefa = INPUT.value;
-    setTarefa(tarefa);
-    preencherListas(TODO_LIST, DONE_LIST);
-    INPUT.value = "";
+ADD_BTN.addEventListener("click", () => {
+    const input = document.querySelector("#novo-item");
+    insert(input, TODO_LIST, DONE_LIST);
 });
+
+document.addEventListener("keypress", (event) => {
+    if(event.key === 'Enter'){
+        const input = document.querySelector("#novo-item");
+        insert(input, TODO_LIST, DONE_LIST);
+    }
+})
 
