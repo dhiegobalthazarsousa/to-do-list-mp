@@ -1,0 +1,20 @@
+{
+  "name": "to-do-list-mp",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/dhiegobalthazarsousa/to-do-list-mp#readme",
+  "bugs": {
+    "url": "https://github.com/dhiegobalthazarsousa/to-do-list-mp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhiegobalthazarsousa/to-do-list-mp.git"
+  },
+  "license": "ISC",
+  "author": "dhiego balthazar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
